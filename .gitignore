@@ -1,0 +1,15 @@
+venv/
+cat > .gitignore << EOF
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+uploads/
+data/
+
+*.h5
+*.weights.h5
+
+app_working_backup.py
+EOF

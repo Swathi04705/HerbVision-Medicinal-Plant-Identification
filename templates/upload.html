@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HerbVision - Upload Plant Image</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='input.css') }}">
+</head>
+
+<body>
+
+<div class="box-form">
+
+```
+<!-- Plant Identification -->
+<div class="left">
+    <div class="overlay_1">
+
+        <br><br>
+
+        <h1>Medicinal Plant Identification</h1>
+
+        <p>
+            Upload a medicinal plant image to identify the species and view
+            medicinal information.
+        </p>
+
+        <p><strong>Supported formats:</strong> JPG, JPEG, PNG</p>
+
+        <br>
+
+        <form action="/plant_species" method="POST" enctype="multipart/form-data">
+
+            <input
+                style="width:220px;
+                border:1px solid rgba(0,0,0,0.4);
+                background-color:rgb(10,125,8);
+                border-radius:15px;
+                text-align:center;"
+                type="file"
+                name="image"
+                required>
+
+            <br><br>
+
+            <input
+                type="submit"
+                value="Identify Plant"
+                style="color:#fff;
+                font-size:16px;
+                padding:12px 35px;
+                border-radius:50px;
+                border:0;
+                outline:0;
+                box-shadow:0px 4px 20px 0px #49c628a6;
+                background-image:linear-gradient(135deg,#70F570 10%,#49C628 100%);">
+
+        </form>
+
+    </div>
+</div>
+
+<!-- Leaf Identification -->
+<div class="right">
+    <div class="overlay_2">
+
+        <br><br>
+
+        <h1>Leaf Segment Identification</h1>
+
+        <p>
+            Upload a cropped leaf image for CNN-based medicinal plant
+            classification.
+        </p>
+
+        <p><strong>Supported formats:</strong> JPG, JPEG, PNG</p>
+
+        <br>
+
+        <form action="/plant_segment" method="POST" enctype="multipart/form-data">
+
+            <input
+                style="width:220px;
+                border:1px solid rgba(0,0,0,0.4);
+                background-color:rgb(10,125,8);
+                border-radius:15px;
+                text-align:center;"
+                type="file"
+                name="image"
+                required>
+
+            <br><br>
+
+            <input
+                type="submit"
+                value="Identify Leaf"
+                style="color:#fff;
+                font-size:16px;
+                padding:12px 35px;
+                border-radius:50px;
+                border:0;
+                outline:0;
+                box-shadow:0px 4px 20px 0px #49c628a6;
+                background-image:linear-gradient(135deg,#70F570 10%,#49C628 100%);">
+
+        </form>
+
+    </div>
+</div>
+```
+
+</div>
+
+</body>
+</html>
